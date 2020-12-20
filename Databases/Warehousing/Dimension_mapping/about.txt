@@ -1,0 +1,18 @@
+i think with the excel mapping, we were doing
+
+**Definitive Source Mapping** - Determine the source and destination for each DATT and FACT. e.g. product or customer is in this data model and that data model. What about customer state? Customer city? 
+
+Identify data mappings from 1+ sources into the integrated model
+
+- which Data Model(s) should we extract information from? So take it from Sales OLTP, or Shipping OLTP...
+- which Data Server(s) should be used? The same data model can appear on multiple dbs. You specificy the db on a specific server
+- what information should be extracted? which columns, which rows?
+- how do we filter? customers from 2018, or from midwest
+- what if there are conflicts? Alice lives in MN, but other source says WI
+- what if there are system failures? what if there's a timeout on the server?
+- frequency and duration concerns? when was it last updated? How long will it run for? It might determine which source to use/
+- system load considerations? How busy is the system? 
+
+For each DATT and FACT, we identify a specific source for the content. This source is typically a single column, from a single table, in a single data model deployed on a single database instance. 
+
+**Easiest scenario: If there is 1 db, 1 data model, single table, single column, that has all info you need, Done!**
