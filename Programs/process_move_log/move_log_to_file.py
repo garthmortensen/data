@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-  __ _ _                                         __  
- / _(_) | ___   _ __ ___   _____   _____ _ __    \ \ 
-| |_| | |/ _ \ | '_ ` _ \ / _ \ \ / / _ \ '__|____\ \
-|  _| | |  __/ | | | | | | (_) \ V /  __/ | |_____/ /
-|_| |_|_|\___| |_| |_| |_|\___/ \_/ \_gm|_|      /_/ 
+ _               _           __ _ _          __  
+| | ___   __ _  | |_ ___    / _(_) | ___     \ \ 
+| |/ _ \ / _` | | __/ _ \  | |_| | |/ _ \_____\ \
+| | (_) | (_| | | || (_) | |  _| | |  __/_gm__/ /
+|_|\___/ \__, |  \__\___/  |_| |_|_|\___|    /_/ 
+         |___/                                   
 
-This script provides the barebones to move files from one directory to another.
+This script provides the barebones to process files in a directory,
+and then log processed filenames to a txt.
 
 It performs a superficial processing (read first lines),
 then moves files from one directory to another
