@@ -1,0 +1,38 @@
+"x"
+"1" "|
+!
+|
+: Chapter 19
+Cost-Sensitive Deep Learning in Keras_
+/ Deep learning neural networks are a flexible class of machine learning algorithms that perform
+/ well on a wide range of problems. Neural networks are trained using the backpropagation of
+| error algorithm that involves calculating errors made by the model on the training dataset and
+
+| | updating the model weights in proportion to those errors. The limitation of this method of
+' training is that examples from each class are treated the same, which for imbalanced datasets
+_ means that the model is adapted a lot more for one class than another.
+| | | | The backpropagation algorithm can be updated to weigh misclassification errors in proportion
+to the importance of the class, referred to as weighted neural networks or cost-sensitive neural
+j networks. This has the effect of allowing the model to pay more attention to examples from the
+| | minority class than the majority class in datasets with a severely skewed class distribution. In
+| this tutorial, you will discover weighted neural networks for imbalanced classification. After —
+| completing this tutorial, you will know: |
+/ _ @ How the standard neural network algorithm does not support imbalanced classification.
+| | e How the neural network training algorithm can be modified to weight misclassification
+| Oo errors in proportion to class importance.
+
+| | e How to configure class weight for neural networks and evaluate the effect on model
+
+| performance.
+| . _ Let’s get started.
+: Note: This chapter makes use of the Keras library. See Appendix B for installation
+1 instructions, if needed. - | 7
+j 19.1 ‘Tutorial Overview
+| This tutorial is divided into four parts; they are: |
+1. Imbalanced Classification Dataset
+: 2. Neural Network Model in Keras |
+i | 3. Deep Learning for Imbalanced Classification
+/ 4, Weighted Neural Network With Keras |
+|
+| | | | 223
+"

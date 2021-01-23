@@ -1,0 +1,42 @@
+"x"
+"1" "| 16.4. Weighted Logistic Regression with Scikit-Learn | 193
+| | suited for imbalanced classification. The coefficients of the logistic regression algorithm are fit
+using an optimization algorithm that minimizes the negative log likelihood (loss) for the model
+on the training dataset. | . |
+| . ° min }~ —(log(yhat;) x y; + log(1 — yhat;) x (1 — yi)) (16.1)
+Po i=1 : |
+fe This involves the repeated use of the model to make predictions followed by an adaptation of
+/ the coefficients in a direction that reduces the loss of the model. The calculation of the loss for
+a given set of coefficients can be modified to take the class balance into account. By default, the
+i errors for each class may be considered to have the same weighting, say 1.0. These weightings =
+can be adjusted based on the importance of each class.
+: min } | —(w0 x log(yhat;)  y; + wl x log(1 — yhat;) x (1 — y;)) (16.2)
+' i=1 os
+_. The weighting is applied to the loss so that smaller weight values result in a smaller error
+value, and-in turn, less update to the model coefficients. A larger weight value results in a larger .
+1 | error calculation, and in turn, more update to the model coefficients. |
+- Wy 5 ° - @ Small Weight: Less importance, less update to the model coefficients. |
+OOF WA |
+L rn ye e Large Weight: More Importance, more update to the model coefficients. |
+| | we | As such, the modified version of logistic regression is referred to as Weighted Logistic
+' a Regression, Class-Weighted Logistic Regression or Cost-Sensitive Logistic Regression. The |
+po | weightings are sometimes referred to as importance weightings. Although straightforward to oo
+: | | implement, the challenge of weighted logistic regression is the choice of the weighting to use for
+| | each class. |
+po 16.4 Weighted Logistic Regression with Scikit-Learn
+| : ~The scikit-learn Python machine learning library provides an implementation of logistic regression
+' | pe that supports class weighting. The LogisticRegression class provides the CLass-weignt
+: Tet ) argument that can be specified as a model hyperparameter. The class_weight tya‘dictionary—
+| ¢ i | that defines-each-class label (e.g. 0 and 1) and the weighting to app y in the calculation of the
+| \We f . ty nefAtive log likelihggd when fitting the model. For example, a1 to 1 weighting for each class 0
+fo ~ and I@an-bedéfined as follows: : ——
+. wae | : , X- Wye Wy =
+' ; iat D- Wey >
+’ # define model tr pre hi Oe K :
+4 weights = {0:1.0, 1:1.0} / | | Wry ty ~ (
+| model = LogisticRegression(solver='lbfgs', class_weight=weights) |
+| Listing 16.9: Example of defining the default class weighting for logistic regression.
+’ The class weighing can be defined multiple ways; for example: | / a
+4 _ @ Domain expertise, determined by talking to subject matter expert®
+: ) ey! Vale
+"
