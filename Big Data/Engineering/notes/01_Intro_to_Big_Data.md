@@ -1,10 +1,14 @@
 # Big Data Engineering
 
+SEIS 736
+
+Garth Mortensen
+
 ## Intro to Big Data
 
 ### Three V's of Big Data
 
-<img src=".\images\vvv.jpg" alt="vvv" style="zoom: 67%;" />
+<img src="./images/vvv.jpg" alt="vvv" style="zoom: 67%;" />
 
 #### Volume
 
@@ -44,7 +48,7 @@ Veracity, validity, volatility, plenty of Vs. The 3 key ones are the important o
 
 ### Definition of data and DIKW pyramid. (01:08:07)
 
-![dikw](.\images\dikw.png)
+![dikw](./images/dikw.png)
 
 This is a construct to reason about different levels of insight we can derive with data as a foundation. 
 
@@ -70,7 +74,7 @@ Very non-tangible thing. In this case, the AI. This would be sort of insights ga
 
 ### Scale out vs scale up (horizontal and vertical scaling)
 
-<img src=".\images\scale_up_out.png" alt="scale_up_out" style="zoom:50%;" />
+<img src="./images/scale_up_out.png" alt="scale_up_out" style="zoom:50%;" />
 
 It's better to spread data out over smaller machines because you benefit from resiliency. A single node is a single point of failure. It's easier to add a node to a cluster than add resources to an existing node. Software is easier to manage on smaller systems, especially with Java applications, memory management within a JVM. Easier to manage a smaller 4 Gb JVM, bc less time garbage collecting, doing memory management. Scaling out is cost effective. Better for distribution of compute and storage.
 
@@ -94,7 +98,7 @@ Computer hardware improvements. Compute, storage, memory, more internet connecti
 
 > ...the observation that [the number](https://en.wikipedia.org/wiki/Transistor_count) of [transistors](https://en.wikipedia.org/wiki/Transistor) in a dense [integrated circuit](https://en.wikipedia.org/wiki/Integrated_circuit) (IC) doubles about every two years.
 
-<img src=".\images\moores.png" alt="moores" style="zoom:50%;" />
+<img src="./images/moores.png" alt="moores" style="zoom:50%;" />
 
 ### Origins of Hadoop: GFS/MapReduce/BigTable, HDFS/Hadoop MR/HBase
 
@@ -116,7 +120,7 @@ You don't just look at a single Linux machine a single operating system when acc
 
 Two parts to this paradigm. 
 
-![mapreduce](.\images\mapreduce.png)
+![mapreduce](./images/mapreduce.png)
 
 ##### Map
 
@@ -146,7 +150,7 @@ BigTable inspired HBase.
 
 Arguably the most important big data trend today is its support of automation and AI systems.
 
-<img src=".\images\learning.png" alt="learning" style="zoom:80%;" />
+<img src="./images/learning.png" alt="learning" style="zoom:80%;" />
 
 According to [Microsoft Research](https://www.aclweb.org/anthology/P01-1005.pdf), as observations increase, AI performs better.  
 
@@ -158,7 +162,7 @@ You see the big data architecture? We talk about the separation between the file
 
 ### NIST Big Data Reference Architecture
 
-![NIST](.\images\NIST.png)
+![NIST](./images/NIST.png)
 
 #### Big Data Framework Provider
 
@@ -197,7 +201,7 @@ Big Data Engineering is mainly the collection, preparation, curation, and analys
 
 These are the data producers, the devices producing the data that you're processing. Consumers might be Tableau, using the data. Also maybe a bit of analytics. Web applications (d3 for graphics/visualization).
 
-<img src=".\images\platforms.png" alt="platforms" style="zoom: 50%;" />
+<img src="./images/platforms.png" alt="platforms" style="zoom: 50%;" />
 
 ### Lambda Data Architecture and CAP Theorem
 
@@ -243,7 +247,7 @@ It's a way to enable real time processing, as well as aggregation and analysis o
 
 Data follows two paths.
 
-<img src=".\images\batch_realtime.png" alt="batch_realtime" style="zoom:80%;" />
+<img src="./images/batch_realtime.png" alt="batch_realtime" style="zoom:80%;" />
 
 ##### Batch path 
 
@@ -285,7 +289,7 @@ A lot of these are Java centric, open source project managed by Apache Software 
 
 ##### YARN
 
-<img src=".\images\yarn.png" alt="yarn" style="zoom:67%;" />
+<img src="./images/yarn.png" alt="yarn" style="zoom:67%;" />
 
 Assigns resources to jobs.
 
@@ -293,25 +297,25 @@ Covers resource negotiation, ensuring that one process doesn't consume all resou
 
 ##### ZooKeeper
 
-<img src=".\images\zookeeper.png" alt="zookeeper" style="zoom:67%;" />
+<img src="./images/zookeeper.png" alt="zookeeper" style="zoom:67%;" />
 
 Essentially a database for storing configurations across a distributed system between machines.
 
 ##### Oozie
 
-<img src=".\images\oozie.png" alt="oozie" style="zoom:50%;" />
+<img src="./images/oozie.png" alt="oozie" style="zoom:50%;" />
 
 Orchestrate jobs. If you have several big data related jobs, such as a MapReduce job than a spark job, then maybe a scoop job or reading some HDFS files you can orchestrate those using Oozie.
 
 ##### Sqoop
 
-<img src=".\images\sqoop.png" alt="sqoop" style="zoom:50%;" />
+<img src="./images/sqoop.png" alt="sqoop" style="zoom:50%;" />
 
 Sqoop has one extremely simple task - replicating sequel data within Hadoop. When you think of sqoop, think SQL on Hadoop. Importing sequel tables to HDFS and vice versa.
 
 ##### MapReduce
 
-<img src=".\images\mapreduce_logo.png" alt="mapreduce_logo" style="zoom:80%;" />
+<img src="./images/mapreduce_logo.png" alt="mapreduce_logo" style="zoom:80%;" />
 
 The original open source MapReduce implementation based on the Google paper. People largely look at it as a platform that's been superseded by Spark. We don't spend any time directly with MapReduce. You'll see some big data tools that we do look at, such as Sqoop, using MapReduce as a back end computation engine.
 
@@ -319,7 +323,7 @@ From a development perspective, we've moved over to spark. However, some older t
 
 ##### Spark
 
-<img src=".\images\spark.png" alt="spark" style="zoom:80%;" />
+<img src="./images/spark.png" alt="spark" style="zoom:80%;" />
 
 Spark is massively distributed compute. It's a Scala application that runs in a JVM. 
 
@@ -327,13 +331,13 @@ The gold standard. It's ubiquitous in big data processing, and we'll look at a c
 
 ##### Pig
 
-<img src=".\images\pig.png" alt="pig" style="zoom:67%;" />
+<img src="./images/pig.png" alt="pig" style="zoom:67%;" />
 
 Pig is a SQL-like scripting language. Uses MapReduce as a backend compute engine.
 
 ##### Tez
 
-<img src=".\images\tez.png" alt="tez" style="zoom:67%;" />
+<img src="./images/tez.png" alt="tez" style="zoom:67%;" />
 
 Tez was originally built as a more performant alternative to MapReduce for consumption by languages and SQL engines like Hive and Pig.
 
@@ -347,6 +351,6 @@ Kafka, Storm, Spark Streaming, NiFi.
 
 ##### ElasticSearch
 
-<img src=".\images\elasticsearch.png" alt="elasticsearch" style="zoom:50%;" />
+<img src="./images/elasticsearch.png" alt="elasticsearch" style="zoom:50%;" />
 
 We will look at elastic search as a full text database option. We'll look at how to reason about process index query full text data sources.
