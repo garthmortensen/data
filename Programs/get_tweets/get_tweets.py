@@ -42,10 +42,19 @@ del filename, lines, f, consumer_key, consumer_key_secret, access_token, access_
 # %%
 
 query = 'cbd'
-tweet_limit = 500
+tweet_limit = 5
 
 # https://docs.tweepy.org/en/latest/api.html#search-tweets
-searched_tweets = [tweet for tweet in tweepy.Cursor(api.search, q=query, lang='en').items(tweet_limit)]
+searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(tweet_limit)]
+
+# %%
+
+# %%
+
+for searched_tweet in searched_tweets:
+    print(searched_tweet)
+
+
 
 # %%
 
