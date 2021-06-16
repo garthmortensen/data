@@ -43,7 +43,7 @@ print(invoices.take(5)) 
    display(df_sorted.take(5))
    ```
    
-   ![1](.\images\1_a.png)
+   ![1](./images/1_a.png)
    
 2. What is the product description for the best selling product in the dataset?  We will define "Best Selling" as the product with the highest quantity sold.
 
@@ -64,7 +64,7 @@ print(invoices.take(5)) 
    display(df_sorted.take(5))
    ```
    
-   ![2](.\images\2_a.png)
+   ![2](./images/2_a.png)
    
 3. How much has each country spent on products?  The output should have two columns, one being the country and the other being the gross dollar amount spent across all products.  Sort the output by the dollar amount, descending.  Print the entire output, showing a gross dollar amount for each country.
 
@@ -85,7 +85,7 @@ print(invoices.take(5)) 
    display(df_sorted.take(5))
    ```
 
-![3](.\images\3_a.png)
+![3](./images/3_a.png)
 
 4. What is the highest-grossing day in the dataset?  Again, use quantity multiplied by unit price to get the revenue per line.
 
@@ -106,11 +106,11 @@ print(invoices.take(5)) 
    display(df_sorted.take(1000))
    ```
    
-   ![4](.\images\4_a.png)
+   ![4](./images/4_a.png)
    
 5. Finally, try out one of Databrick's visualizations.
 
-   ![5](.\images\5.png)
+   ![5](./images/5.png)
 
 ### Invoice data questions using SQL API
 
@@ -128,7 +128,7 @@ tbl_output = sqlContext.sql("""
 display(tbl_output)
 ```
 
-![sql_start](.\images\sql_start.png)
+![sql_start](./images/sql_start.png)
 
 1. Which customer in the dataset has spent the most on products?  The quantity multiplied by the unit price will give you the total dollar amount spent per invoice line.
 
@@ -147,7 +147,7 @@ display(tbl_output)
    display(table.take(5))
    ```
 
-   ![sql_1](.\images\sql_1.png)
+   ![sql_1](./images/sql_1.png)
 
 2. What is the product description for the best selling product in the dataset?  We will define "Best Selling" as the product with the highest quantity sold.
 
@@ -165,7 +165,7 @@ display(tbl_output)
    display(table.take(5))
    ```
 
-   ![sql_2](.\images\sql_2.png)
+   ![sql_2](./images/sql_2.png)
 
 3. How much has each country spent on products?  The output should have two columns, one being the country and the other being the gross dollar amount spent across all products.  Sort the output by the dollar amount, descending.  Print the entire output, showing a gross dollar amount for each country.
 
@@ -183,7 +183,7 @@ display(tbl_output)
    display(table.take(5))
    ```
 
-![sql_3](.\images\sql_3.png)
+![sql_3](./images/sql_3.png)
 
 4. What is the highest-grossing day in the dataset?  Again, use quantity multiplied by unit price to get the revenue per line.
 
@@ -201,7 +201,7 @@ display(tbl_output)
    display(table.take(5))
    ```
 
-   ![sql_4](.\images\sql_4.png)
+   ![sql_4](./images/sql_4.png)
 
 5. Finally, try out one of Databrick's visualizations.
 
@@ -219,7 +219,7 @@ display(tbl_output)
    display(table)
    ```
 
-   ![sql_visual](.\images\sql_5.png)
+   ![sql_visual](./images/sql_5.png)
 
 
 

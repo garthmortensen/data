@@ -203,7 +203,7 @@ GET /_search
       "must": [
         {
       "query_string": {
-        "query": "\"Polonius slain\"~5",
+        "query": "/"Polonius slain/"~5",
         "default_field": "text_entry"
       }}],
       "filter": [ 
@@ -250,7 +250,7 @@ GET /_search
 }
 ```
 
-![slain](.\images\slain.png)
+![slain](./images/slain.png)
 
 #### Inspirational queries
 
@@ -359,7 +359,7 @@ GET /_search
       "must": [
         {
       "query_string": {
-        "query": "\"desdemona dead\"~2",
+        "query": "/"desdemona dead/"~2",
         "default_field": "text_entry"
       }}],
       "filter": [ 

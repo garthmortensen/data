@@ -39,7 +39,7 @@ The cloud provider has handled all CapEx and achieved economies of scale.
 
 ### Cloud Offerings
 
-<img src=".\images\saas.png" alt="saas" style="zoom:50%;" />
+<img src="./images/saas.png" alt="saas" style="zoom:50%;" />
 
 Responsibility to support and maintain it transitions from user to provider, as you descend this list.
 
@@ -92,7 +92,7 @@ It's more efficient utilization of memory, which tends to be expensive.
 
 ### Hypervisors
 
-![hypervisor](.\images\hypervisor.png)
+![hypervisor](./images/hypervisor.png)
 
 you have the underlying hardware, you have a host operating system typically Linux or unix.
 
@@ -226,11 +226,12 @@ You need to have that data persistence somewhere. You can't overwrite it. That's
 
 bc hadoop and spark are so core for data storage and data processing in hadoop, they're a platform classification and their own right.
 
-![wave](.\images\wave.png)
+![wave](./images/wave.png)
 
 They all offer HARK platforms.
 
-![offerings](.\images\offerings.png)
+![offerings](./images/offerings.png)
 
 There are big data options on cloud environments.
 
+/	/

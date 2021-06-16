@@ -26,7 +26,7 @@ Screenshot the results.
    display(df.take(10))
    ```
 
-   ![1](.\images\1_b.png)
+   ![1](./images/1_b.png)
 
 2. Explain what regexp_extract is doing.
 
@@ -38,7 +38,7 @@ Screenshot the results.
 
    `+` catches one or more of the preceding token, which here is `.`
 
-   `\[`is an escape to capture left bracket. Here, we capture the left bracket in the timedate field
+   `/[`is an escape to capture left bracket. Here, we capture the left bracket in the timedate field
 
    `()` is to capture the first group, which I think distinguishes between what comes before and after the -
 
@@ -52,14 +52,14 @@ Screenshot the results.
 
    ```python
    # it should actually be MMM
-   converted = df.select(unix_timestamp(regexp_extract(df["value"], ".+\[(.+) -", 1), "dd/MMM/yyyy:HH:mm:ss") \
+   converted = df.select(unix_timestamp(regexp_extract(df["value"], ".+/[(.+) -", 1), "dd/MMM/yyyy:HH:mm:ss") /
                          .cast(TimestampType()).alias("timestamped"),
                          split(df["value"], " ")[8].alias("code"))
    
    display(converted.take(10))
    ```
 
-   ![2](.\images\2_b.png)
+   ![2](./images/2_b.png)
 
 3. What role does unix_timestamp function play in this date conversion? Where did the "dd/MMM/yyy...." string come from?
 

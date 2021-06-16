@@ -31,7 +31,7 @@ Data Bricks has "Platform As A Service" spark clusters. You basically select a p
 
 Interactive is more like an ad-hoc query submitted from a client, and you get an interactive response. The results are up to date, but become stale. Like a SQL query.
 
-![spark_ref_architecture](.\images\spark_ref_architecture.png)
+![spark_ref_architecture](./images/spark_ref_architecture.png)
 
 #### Alts
 
@@ -79,7 +79,7 @@ As a general rule of thumb, if you're dealing with unstructured data, you might 
 
 Note that you can kind of arbitrarily convert between these different types of data abstractions, so you always start with a context. 
 
-![context](.\images\context.png)
+![context](./images/context.png)
 
 It encapsulates the details of your cluster, so that you can submit a job to your cluster, call operations on the cluster, create a new object on the cluster (such as an RDD). If you're creating an RDD from the Spark Context, that would be done using parallelize. You can call that parallelized on a file to read a file into an RDD. From a SQL Contexts perspective, you'll be using SQL Contexts that read a .csv, .json, .avro, or a parquet file. 
 
@@ -91,7 +91,7 @@ You can also just use a generic create Dataset if you wanted strongly typed rows
 
 This is what Spark runtime looks like.
 
-![spark_arch](.\images\spark_arch.png)
+![spark_arch](./images/spark_arch.png)
 
 Context acts as an interface to spark features and you can specify a Spark Context and your code. If you're doing development using databricks or using pyspark, the context will typically be provided to you. 
 
@@ -127,7 +127,7 @@ You've probably done functional programming at one point or another. If you're w
 
 ### Word Count MapReduce
 
-![wordcount_mapreduce](.\images\wordcount_mapreduce.png)
+![wordcount_mapreduce](./images/wordcount_mapreduce.png)
 
 ### Spark Transformations, actions, lazy execution
 
@@ -177,7 +177,7 @@ There's a couple ways to do streaming in spark but the architecture is kind of t
 
 Data sources for spark streaming - we covered Kafka...there's a lot of other options. It can interface with both static and streaming data sources independently, which is good if you want to be able to merge incoming data streams in spark. It can interface with things like MLLib to train models with live data. 
 
-![spark_stream](.\images\spark_stream.png)
+![spark_stream](./images/spark_stream.png)
 
 
 
