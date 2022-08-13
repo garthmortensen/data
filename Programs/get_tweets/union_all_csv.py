@@ -12,6 +12,8 @@ import pandas as pd
 
 
 filepath = "C:/twitter/output/"
+filepath = "C:/gdrive/01_StThomas/11_BigDataEngineering/11_project/data/"
+
 
 df_all = pd.DataFrame()
 

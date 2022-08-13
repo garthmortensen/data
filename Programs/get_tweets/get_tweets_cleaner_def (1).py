@@ -18,7 +18,7 @@ This script queries twitters API by lang and exports fields to csv
 API 1.1 rate limits
 Endpoint                    = GET search/tweets
 Requests/window per user	= 180
-Requests/window per app     = 450	
+Requests/window per app     = 450
 """
 
 #pip install tweepy
@@ -32,7 +32,7 @@ from datetime import datetime  # for timestamped files
 # =============================================================================
 
 filepath = "C:/twitter/"
-filename = "keys2.txt"
+filename = "keys.txt"
 
 with open(filepath + filename) as f:
     lines = f.readlines()
@@ -107,7 +107,6 @@ def make_df(searched_tweets, query_clean, FROM_DATE):
     
     return df
 
-
 def write_file(df, filepath, query_clean):
     """write df to intelligently named csv file"""
     
@@ -115,10 +114,10 @@ def write_file(df, filepath, query_clean):
     timestamp = datetime.today().strftime('%Y-%m-%d-%H-%M-%S')
     
     # write to disk
-    df.to_csv(filepath + "/output/" + timestamp + "_q_" + query_clean + ".csv",
+    df.to_csv(filepath + "/output/" + timestamp + "_q_" + query_clean + "_laptop.csv",
               index=False)
     
-    print("file written at: ", timestamp)
+    print("filewrite at:", timestamp)
 
 
 # =============================================================================
@@ -157,4 +156,3 @@ while True:
         
         # write it to disk
         write_file(df, filepath, query_clean)
-        
